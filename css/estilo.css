@@ -1,0 +1,299 @@
+:root {
+    --main-color: #fde008;
+    --main-gray: rgb(30, 30, 30);
+    --light-gray: rgb(201, 201, 201);
+}
+*{
+    box-sizing: border-box;
+}
+body {
+    margin:0;
+    font-family: 'Futura';
+    background-color: var(--main-color);
+}
+#menu {
+    height: 200px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 200px;
+    align-items: center;
+    overflow: hidden;
+    position:relative;
+
+}
+#menu #secciones {
+     display: flex;
+     flex-direction: row;
+}
+#menu #secciones .seccion {
+     position: relative;
+     padding: 0px 12px;
+     display: flex;
+     flex-direction: column;
+}
+#menu #secciones .seccion .desplegable {
+    position: absolute;
+    top: 20px;
+    background-color: rgb(23, 23, 23);
+    color: var(--main-color);
+    display: none;
+    /*flex-direction: column;*/
+    padding: 16px;
+}
+#menu #secciones .seccion .desplegable a{
+    white-space: nowrap;
+    text-decoration: none;
+    color: white;
+    padding: 4px;
+}
+#menu #burger-menu{
+    display:none;
+}
+header.hero {
+     background-image: url('https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1641853527270-1QV7RWMNNZ99J5DFB722/r315_34a_pub.pub16.356.jpg?format=2500w');
+     background-size: cover;
+     background-position: center;
+     width: 100%;
+     height: 1200px;
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: baseline;
+     align-items: center;
+}
+header.hero .imagen{
+     width: 800px;
+     overflow: hidden;
+     margin-right: 15%;
+}
+header.hero .imagen img {
+     width: 100%;
+}
+div.row{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 80px;
+}
+div.row .caja {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 200px;
+     width: 24%;
+     margin: 10px 0px;
+     overflow: hidden;
+}
+div.row .caja .texto{
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    backface-visibility:hidden;
+    transform: rotateX(180deg);
+    transition: 1s;
+
+}
+div.row .caja img {
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+    object-fit: cover;
+    /* position: relative;
+    backface-visibility:hidden; */
+}
+
+div.row #trabajos {
+    display: flex;
+    justify-content: flex-start;
+}
+div.row #trabajos div{
+    padding: 0px 10px;
+}
+/*----------MENU DESPLEGABLE------------*/
+#desplegable {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: -80%;
+    padding: 12px;
+    z-index: 2;
+    transition: 1s;
+} 
+#close {
+    position: absolute;
+    top: 89px;
+    right: -200px;
+    transition: 1s;
+}
+#desplegable .seccion {
+    padding: 4px 0px;
+    font-size: 14px;
+}
+/*----------------------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+
+}
+footer .social{
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+footer .social i{
+    padding: 10px 10px;
+}
+footer .links {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer .links a{
+    text-decoration: none;
+    padding: 4px 10px;
+    color: lightslategray;
+    border-right: solid black 1px;
+}
+/*---------------------- ANIMACIONES --------------------------*/
+footer .social:hover{
+    color: lightslategray;
+}
+footer .social i:hover{
+    color: black;
+}
+footer .links a:hover{
+    text-decoration: none;
+    color: rgb(169, 180, 191);
+}
+#menu #secciones .seccion:hover {
+    color: rgb(169, 180, 191);
+}
+#menu #secciones .seccion:hover .desplegable {
+    display: flex;
+    flex-direction: column;
+}
+div.row .caja:hover .imagen {
+    transform: scale(1.5);
+}
+div.row .caja:hover .texto{
+    transform: rotateX(0deg);
+}
+/*-------------MEDIA QUERYS---------------------*/
+@media (min-width: 600px) and (max-width: 1000px) {
+
+    #menu #secciones {
+        display:none;
+    }
+    #menu #burger-menu {
+        display:flex;
+    }
+    header.hero {
+        height: 500px;
+   }
+    div.row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 60px 12px;
+        
+    }
+    #menu {
+        height: 200px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px;
+        align-items: center;
+    }
+    div.row .caja {
+        width: 32%;
+     
+   }
+   header.hero .imagen{
+    width: 50%;
+    margin: 0 auto;
+    }
+    .show {
+        transform: translateX(100%);  
+    }
+    .show-close {
+        transform: translateX(-210px);
+    }
+
+}
+@media screen and (max-width: 600px) {
+
+    #menu #secciones {
+        display:none;
+    }
+    #menu #burger-menu {
+        display:flex;
+    }
+    header.hero {
+        height: 500px;
+   }
+    div.row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 60px 12px;
+        
+    }
+    #menu {
+        height: 200px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px;
+        align-items: center;
+    }
+    div.row .caja {
+        width: 100%;
+    }
+   header.hero .imagen{
+    width: 80%;
+    margin: 0 auto;
+    }
+    .show {
+        transform: translateX(100%);  
+    }
+    .show-close {
+        transform: translateX(-210px);
+    }
+/*----------CAR TOONS-------*/
+    header.hero#cars {
+        height: 500px;
+    }
+    div.row .maters .text_mater {
+        width: 100%;
+    }
+    div.row .maters .img_mater {
+        width: 100%;
+    }
+    header.hero#cars .hero_title {
+        width: 100%;
+        color: white;
+        font-size: 200%;
+        text-align: center;
+    }
+    div.row .cartel {
+        width: 46%;
+        margin: 2%;
+    }
+}
