@@ -8,7 +8,7 @@
 }
 body {
     margin:0;
-    font-family: 'Futura';
+    font-family: Helvetica, sans-serif;
     background-color: var(--main-color);
 }
 #menu {
@@ -94,12 +94,12 @@ div.row .caja .texto{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(0, 0, 0);
+    color: var(--main-color);
     backface-visibility:hidden;
     transform: rotateX(180deg);
     transition: 1s;
-
 }
+
 div.row .caja img {
     width: 100%;
     overflow: hidden;
