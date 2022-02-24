@@ -51,43 +51,60 @@ body {
     display:none;
 }
 header.hero {
-     background-image: url('https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1641853527270-1QV7RWMNNZ99J5DFB722/r315_34a_pub.pub16.356.jpg?format=2500w');
+     /* background-image: url('../img/ilustracion/ReadyToRumble_IG.jpg');
      background-size: cover;
-     background-position: center;
-     width: 100%;
-     height: 1200px;
+     background-position: center; */
+     background-color: aquamarine;
+     width: 100vw;
+     height: 700px;
      display: flex;
-     flex-direction: row-reverse;
-     justify-content: baseline;
-     align-items: center;
-}
-header.hero .imagen{
-     width: 800px;
-     overflow: hidden;
-     margin-right: 15%;
 }
 header.hero .imagen img {
      width: 100%;
 }
 div.row{
     width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 100px 80px;
+    padding: 20px 10%;
 }
-div.row .caja {
-     display: flex;
+div.row #trabajos {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+    border-bottom: solid black 2px;
+}
+div.row #trabajos div{
+    padding: 0px 10px;
+}
+.ventana {
+    width: 100vw;
+    overflow: hidden;
+}
+.super-container {
+    white-space: nowrap;
+    position:relative;
+    transition: 1s;
+}
+div.content{
+    width: 100vw;
+    height: 1000px;
+    display: inline-flex;
+    flex-direction: row;
+    align-content:space-evenly;
+    flex-wrap: wrap;
+    padding: 20px 10%;
+}
+div.content .caja {
+    position: relative; 
+    display: flex;
      flex-direction: column;
      align-items: center;
      justify-content: center;
-     height: 200px;
+     height: 400px;
      width: 24%;
-     margin: 10px 0px;
+     margin: 0px 0.5%;
      overflow: hidden;
 }
-div.row .caja .texto{
+div.content .caja .texto{
     position: absolute;
     padding: 20px;
     display: flex;
@@ -98,23 +115,21 @@ div.row .caja .texto{
     backface-visibility:hidden;
     transform: rotateX(180deg);
     transition: 1s;
+    z-index:2;
 }
-
-div.row .caja img {
+div.content .caja img {
     width: 100%;
     overflow: hidden;
     transition: 1s;
     object-fit: cover;
-    /* position: relative;
-    backface-visibility:hidden; */
 }
-
-div.row #trabajos {
-    display: flex;
-    justify-content: flex-start;
-}
-div.row #trabajos div{
-    padding: 0px 10px;
+div.content .caja .pantalla{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-gray);
+    opacity: 0;
+    transition: 1s;
 }
 /*----------MENU DESPLEGABLE------------*/
 #desplegable {
@@ -139,7 +154,7 @@ div.row #trabajos div{
     padding: 4px 0px;
     font-size: 14px;
 }
-/*----------------------------*/
+/*------------footer----------------*/
 footer {
     display: flex;
     flex-direction: column;
@@ -188,11 +203,14 @@ footer .links a:hover{
     display: flex;
     flex-direction: column;
 }
-div.row .caja:hover .imagen {
+div.content .caja:hover .imagen {
     transform: scale(1.5);
 }
-div.row .caja:hover .texto{
+div.content .caja:hover .texto{
     transform: rotateX(0deg);
+}
+div.content .caja:hover .pantalla{
+    opacity: 0.8;
 }
 /*-------------MEDIA QUERYS---------------------*/
 @media (min-width: 600px) and (max-width: 1000px) {
@@ -296,4 +314,24 @@ div.row .caja:hover .texto{
         width: 46%;
         margin: 2%;
     }
+}
+/*-------------------CLASES JQUERYS----------------------*/
+.go-item-1 {
+    left:0;
+}
+.go-item-2 {
+    left:-100vw;
+}
+.go-item-3 {
+    left:-200vw;
+}
+.go-item-4 {
+    left:-300vw;
+}
+.go-item-5 {
+    left:-400vw;
+}
+.selected-item {
+    background-color: var(--main-gray);
+    color: var(--main-color);
 }
