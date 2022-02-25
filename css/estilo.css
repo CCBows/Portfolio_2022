@@ -70,6 +70,7 @@ div.row #trabajos {
     display: flex;
     justify-content: flex-start;
     border-bottom: solid black 2px;
+    width: 100%;
 }
 div.row #trabajos div{
     padding: 10px 10px;
@@ -85,7 +86,7 @@ div.row #trabajos div{
 }
 div.content{
     width: 100vw;
-    height: 1000px;
+    /* height: 1200px; */
     display: inline-flex;
     flex-direction: row;
     align-content:space-evenly;
@@ -100,7 +101,7 @@ div.content .caja {
      justify-content: center;
      width: 24%;
      aspect-ratio: 1/1;
-     margin: 0px 0.5%;
+     margin: 5px 0.5%;
      overflow: hidden;
 }
 div.content .caja .texto{
@@ -111,6 +112,7 @@ div.content .caja .texto{
     justify-content: center;
     align-items: center;
     color: var(--main-color);
+    font-size: 24px;
     backface-visibility:hidden;
     transform: rotateX(180deg);
     transition: 1s;
@@ -134,7 +136,7 @@ div.content .caja .pantalla{
 #desplegable {
     width: 80%;
     height: 100%;
-    background-color: white;
+    background-color: var(--main-color);
     flex-direction: column;
     position: absolute;
     top: 0px;
@@ -184,6 +186,49 @@ footer .links a{
     color: lightslategray;
     border-right: solid black 1px;
 }
+/*------------lightbox----------------*/
+.contenedor_lightbox {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    top:0;
+}
+.fondo_lightbox {    
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-gray);
+    opacity: 0.5;
+}
+.lightbox {
+    width:70%;
+    background-color: var(--main-gray);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+    z-index:2;
+}
+.contenedor_lightbox .lightbox img{
+    width: 20%;
+}
+/* .cierre_lightbox {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    position: relative;
+    top: -216px;
+    right: -97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 /*---------------------- ANIMACIONES --------------------------*/
 footer .social:hover{
     color: lightslategray;
@@ -212,7 +257,7 @@ div.content .caja:hover .pantalla{
     opacity: 0.8;
 }
 /*-------------MEDIA QUERYS---------------------*/
-@media (min-width: 600px) and (max-width: 1000px) {
+@media (min-width: 768px) and (max-width: 1000px) {
 
     #menu #secciones {
         display:none;
@@ -222,13 +267,17 @@ div.content .caja:hover .pantalla{
     }
     header.hero {
         height: 500px;
-   }
+    }
+    header.hero .imagen{
+    width: 50%;
+    margin: 0 auto;
+    }
     div.row{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 60px 12px;
-        
+        width: 100vw;
+        padding: 40px 10%;
     }
     #menu {
         height: 200px;
@@ -238,13 +287,8 @@ div.content .caja:hover .pantalla{
         padding: 8px;
         align-items: center;
     }
-    div.row .caja {
+    div.content .caja {
         width: 32%;
-     
-   }
-   header.hero .imagen{
-    width: 50%;
-    margin: 0 auto;
     }
     .show {
         transform: translateX(100%);  
@@ -254,7 +298,7 @@ div.content .caja:hover .pantalla{
     }
 
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
 
     #menu #secciones {
         display:none;
@@ -280,10 +324,10 @@ div.content .caja:hover .pantalla{
         padding: 8px;
         align-items: center;
     }
-    div.row .caja {
+    div.content .caja {
         width: 100%;
     }
-   header.hero .imagen{
+    header.hero .imagen{
     width: 80%;
     margin: 0 auto;
     }
@@ -293,26 +337,17 @@ div.content .caja:hover .pantalla{
     .show-close {
         transform: translateX(-210px);
     }
-/*----------CAR TOONS-------*/
-    header.hero#cars {
-        height: 500px;
+    div.row #trabajos div{
+        padding: 10px 10px;
+        font-size: 12px;
     }
-    div.row .maters .text_mater {
-        width: 100%;
+    div.row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 10%;
     }
-    div.row .maters .img_mater {
-        width: 100%;
-    }
-    header.hero#cars .hero_title {
-        width: 100%;
-        color: white;
-        font-size: 200%;
-        text-align: center;
-    }
-    div.row .cartel {
-        width: 46%;
-        margin: 2%;
-    }
+
 }
 /*-------------------CLASES JQUERYS----------------------*/
 .go-item-1 {
@@ -333,4 +368,10 @@ div.content .caja:hover .pantalla{
 .selected-item {
     background-color: var(--main-gray);
     color: var(--main-color);
+}
+.display-none {
+    display:none;
+}
+.display {
+    display: block;
 }

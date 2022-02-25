@@ -52,5 +52,10 @@ $(document).ready(function(){
         $(".item-3").removeClass("selected-item");
         $(".item-4").removeClass("selected-item");
     });
-
+    $(".caja").click(function(){
+        $(".contenedor_lightbox").toggleClass("display-none");
+    });
+    $(".fondo_lightbox").click(function(){
+        $(".contenedor_lightbox").addClass("display-none");
+    });
 });
