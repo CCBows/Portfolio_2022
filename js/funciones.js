@@ -58,4 +58,60 @@ $(document).ready(function(){
     $(".fondo_lightbox").click(function(){
         $(".contenedor_lightbox").addClass("display-none");
     });
+    $(".contenedor_lightbox .cierre").click(function(){
+        $(".contenedor_lightbox").addClass("display-none");
+    });
+    
+    var coleccion = [
+        //JSON
+        {
+            hero: "fight for your hive",
+            descripcion: "texto intenso",
+            imgs: [
+                "img/ilustracion/fightforyourhive_texture-01.png",
+                "img/ilustracion/bees.jpg",
+                "img/ilustracion/mariposa_baja.png",
+                "img/ilustracion/escarabajo.png",
+            ]
+        }//0
+        ,
+        {
+            hero: "otro",
+            descripcion: "ese texto bueno ahí",
+            imgs: [
+                "img/ilustracion/mariposa_baja.png",
+                "img/ilustracion/fightforyourhive_texture-01.png",
+                "img/ilustracion/bees.jpg",
+                "img/ilustracion/escarabajo.png",
+            ]
+        }//1
+    ]
+
+    console.log(coleccion[0]);
+
+    //ARRAY
+
+    $(".caja").click(function(){
+        //asigna valor i basado en el data-number de .caja
+        var i = $(this).data ("number");
+        console.log(i);
+        //borrarlo preventivamente para poder cargar cosas
+        $(".titulo_lightbox").html("");
+        $(".descripcion_lightbox").html("");
+        $(".imgs_lightbox").html("");
+        
+        coleccion[i].hero;
+        $(".titulo_lightbox").append("<h1>"+coleccion[i].hero+"</h1>");
+
+        coleccion[i].descripcion;
+        $(".descripcion_lightbox").append("<span>"+coleccion[i].descripcion+"</span>");
+
+        coleccion[i].imgs.forEach (function(imagen){
+            
+            $(".imgs_lightbox").append("<img src='"+imagen+"'>")
+
+        });
+    })
+    
+    
 });

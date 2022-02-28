@@ -132,6 +132,19 @@ div.content .caja .pantalla{
     opacity: 0;
     transition: 1s;
 }
+.contenedor_lightbox .cierre {
+    height: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    border: none;
+    font-size: 32px;
+    z-index: 100;
+    position: fixed;
+    top: 44px;
+    right: 23px;
+    display: none;
+}
 /*----------MENU DESPLEGABLE------------*/
 #desplegable {
     width: 80%;
@@ -195,6 +208,7 @@ footer .links a{
     align-items: center;
     position: fixed;
     top:0;
+    z-index:3;
 }
 .fondo_lightbox {    
     position: absolute;
@@ -207,28 +221,32 @@ footer .links a{
     width:70%;
     background-color: var(--main-gray);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: nowrap;
     padding: 20px;
     z-index:2;
 }
+.contenedor_lightbox .lightbox .titulo_lightbox h1{
+    
+    color: var(--main-color);
+} 
+.contenedor_lightbox .lightbox .descripcion_lightbox{
+    padding: 30px 0px;
+    color: var(--main-color);
+}
+.contenedor_lightbox .lightbox .imgs_lightbox{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+}    
 .contenedor_lightbox .lightbox img{
     width: 20%;
 }
-/* .cierre_lightbox {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--main-color);
-    position: relative;
-    top: -216px;
-    right: -97%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 /*---------------------- ANIMACIONES --------------------------*/
 footer .social:hover{
     color: lightslategray;
@@ -290,11 +308,48 @@ div.content .caja:hover .pantalla{
     div.content .caja {
         width: 32%;
     }
-    .show {
-        transform: translateX(100%);  
+    /*-------LIGHTBOX----------*/
+    .contenedor_lightbox {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 10;
     }
-    .show-close {
-        transform: translateX(-210px);
+    .lightbox {
+        width:80%;
+        max-height: 98vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        padding: 20px;
+        z-index:2;
+    }
+    .contenedor_lightbox .lightbox .imgs_lightbox{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 90vh;
+        overflow-y: scroll;
+    }   
+    .contenedor_lightbox .lightbox img{
+        width: 25%;
+        padding: 8px 0px;
+    }
+    .contenedor_lightbox .cierre {
+        position: fixed;
+        top: 44px;
+        right: 23px;
+        display: block;
     }
 
 }
@@ -347,7 +402,49 @@ div.content .caja:hover .pantalla{
         justify-content: space-between;
         padding: 40px 10%;
     }
-
+    /*-------LIGHTBOX----------*/
+    .contenedor_lightbox {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+    }
+    .lightbox {
+        width:100%;
+        max-height: 98vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        padding: 20px;
+        z-index:2;
+    }
+    .contenedor_lightbox .lightbox .imgs_lightbox{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 90vh;
+        overflow-y: scroll;
+    }   
+    .contenedor_lightbox .lightbox img{
+        width: 100%;
+        padding: 8px 0px;
+    }
+    .contenedor_lightbox .cierre {
+        position: fixed;
+        top: 44px;
+        right: 23px;
+        display: block;
+    }
 }
 /*-------------------CLASES JQUERYS----------------------*/
 .go-item-1 {
@@ -371,7 +468,4 @@ div.content .caja:hover .pantalla{
 }
 .display-none {
     display:none;
-}
-.display {
-    display: block;
 }
