@@ -118,8 +118,13 @@ div.content .caja .texto{
     transition: 1s;
     z-index:2;
 }
+div.content .caja .texto span{
+    white-space: normal;
+    text-align: center;
+}
 div.content .caja img {
     width: 100%;
+    height: 100%;
     overflow: hidden;
     transition: 1s;
     object-fit: cover;
@@ -219,6 +224,7 @@ footer .links a{
 }
 .lightbox {
     width:70%;
+    max-height: 100vh;
     background-color: var(--main-gray);
     display: flex;
     flex-direction: column;
@@ -242,10 +248,17 @@ footer .links a{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    overflow-y: scroll;
 }    
-.contenedor_lightbox .lightbox img{
-    width: 20%;
+.contenedor_lightbox .lightbox .imgs_lightbox img{
+    /* width: 20%; */
+    height: 600px;
+    padding: 10px 0px
+}
+.contenedor_lightbox .lightbox .imgs_lightbox video{
+    width: 75%;
+    padding: 10px 0px
 }
 /*---------------------- ANIMACIONES --------------------------*/
 footer .social:hover{
@@ -289,6 +302,12 @@ div.content .caja:hover .pantalla{
     header.hero .imagen{
     width: 50%;
     margin: 0 auto;
+    }
+    .show {
+        transform: translateX(100%);  
+    }
+    .show-close {
+        transform: translateX(-210px);
     }
     div.row{
         display: flex;
@@ -342,7 +361,7 @@ div.content .caja:hover .pantalla{
         overflow-y: scroll;
     }   
     .contenedor_lightbox .lightbox img{
-        width: 25%;
+        /* width: 25%; */
         padding: 8px 0px;
     }
     .contenedor_lightbox .cierre {
@@ -363,7 +382,7 @@ div.content .caja:hover .pantalla{
     }
     header.hero {
         height: 500px;
-   }
+    }
     div.row{
         display: flex;
         flex-direction: row;
@@ -437,6 +456,7 @@ div.content .caja:hover .pantalla{
     }   
     .contenedor_lightbox .lightbox img{
         width: 100%;
+        height: auto;
         padding: 8px 0px;
     }
     .contenedor_lightbox .cierre {
