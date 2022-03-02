@@ -68,10 +68,10 @@ $(document).ready(function(){
             hero: "Fight for your hive",
             descripcion: "texto intenso",
             imgs: [
-                "img/ilustracion/fightforyourhive_texture-01.png",
-                "img/ilustracion/bees.jpg",
-                "img/ilustracion/mariposa_baja.png",
-                "img/ilustracion/escarabajo.png",
+                {type: "imagen", src:"img/ilustracion/fightforyourhive_texture-01.png"},
+                {type: "imagen", src:"img/ilustracion/bees.jpg"},
+                {type: "imagen", src:"img/ilustracion/mariposa_baja.png"},
+                {type: "imagen", src:"img/ilustracion/escarabajo.png"},
             ]
         }//0
         ,
@@ -79,7 +79,8 @@ $(document).ready(function(){
             hero: "Stupid climate change",
             descripcion: "ese texto bueno ahí",
             imgs: [
-                "img/ilustracion/mariposa_baja.png",
+                {type: "imagen", src:"img/ilustracion/mariposa_baja.png"}
+                ,
             ]
         }//1
         ,
@@ -87,11 +88,11 @@ $(document).ready(function(){
             hero: "Game night gone wild",
             descripcion: "texto intenso",
             imgs: [
-                "img/ilustracion/Boxeo Final_BAJA.jpg",
-                "img/ilustracion/RugbyFinal_BAJA.jpg",
-                "img/ilustracion/TaekwondoFinal_BAJA.jpg",
-                "img/ilustracion/TigreHockey_BAJA.jpg",
-                "img/ilustracion/Surf_Final-BAJA.jpg",
+                {type: "imagen", src:"img/ilustracion/Boxeo Final_BAJA.jpg"},
+                {type: "imagen", src:"img/ilustracion/RugbyFinal_BAJA.jpg"},
+                {type: "imagen", src:"img/ilustracion/TaekwondoFinal_BAJA.jpg"},
+                {type: "imagen", src:"img/ilustracion/TigreHockey_BAJA.jpg"},
+                {type: "imagen", src:"img/ilustracion/Surf_Final-BAJA.jpg"},
             ]
         }//2
         ,
@@ -99,8 +100,7 @@ $(document).ready(function(){
             hero: "Anax Imperator",
             descripcion: "texto intenso",
             imgs: [
-                
-                "img/ilustracion/AnaxImperator.jpg",
+                {type: "imagen", src:"img/ilustracion/AnaxImperator.jpg"}
             ]
         }//3
         ,
@@ -108,8 +108,8 @@ $(document).ready(function(){
             hero: "Searching signal",
             descripcion: "texto intenso",
             imgs: [
+                {type: "imagen", src:"img/ilustracion/Moai.jpg"}
                 
-                "img/ilustracion/Moai.jpg",
             ]
         }//4
         ,
@@ -117,8 +117,7 @@ $(document).ready(function(){
             hero: "Kinda confused",
             descripcion: "texto intenso",
             imgs: [
-                
-                "img/ilustracion/fightforyourhive_texture-01.png",
+                {type: "imagen", src:"img/ilustracion/fightforyourhive_texture-01.png"}
             ]
         }//5
         ,
@@ -127,7 +126,7 @@ $(document).ready(function(){
             descripcion: "texto intenso",
             imgs: [
                 
-                "img/ilustracion/ReadyToRumble_IG.jpg",
+                {type: "imagen", src:"img/ilustracion/ReadyToRumble_IG.jpg"}
             ]
         }//6
         ,
@@ -135,8 +134,8 @@ $(document).ready(function(){
             hero: "It came from outer space",
             descripcion: "texto intenso",
             imgs: [
+                {type: "imagen", src:"img/ilustracion/RenderGRanero.jpg"}
                 
-                "img/ilustracion/RenderGRanero.jpg",
             ]
         }//7
         ,
@@ -144,8 +143,8 @@ $(document).ready(function(){
             hero: "Sand dunes and send nudes",
             descripcion: "texto intenso",
             imgs: [
-                
-                "img/ilustracion/SanDunes_CUADRADO-02.png",
+                {type: "imagen", src:"img/ilustracion/SanDunes_CUADRADO-02.png"}
+                ,
             ]
         }//8
         ,
@@ -153,8 +152,8 @@ $(document).ready(function(){
             hero: "Lo que acecha en el umbral",
             descripcion: "texto intenso",
             imgs: [
-                
-                "img/diseño editorial/Lovecraft.jpg",
+                {type: "imagen", src:"img/diseño editorial/Lovecraft.jpg"}
+                ,
                 
             ]
         }//9
@@ -173,8 +172,8 @@ $(document).ready(function(){
             hero: "Mini",
             descripcion: "texto intenso",
             imgs: [
-                
-                "img/publicidad/mini_MU.jpg",
+                {type: "imagen", src:"img/publicidad/mini_MU.jpg"}
+                ,
                 
             ]
         }//11
@@ -183,7 +182,8 @@ $(document).ready(function(){
             hero: "Irismedia",
             descripcion: "texto intenso",
             imgs: [
-                "img/publicidad/Publicista_MockUp.png",
+                {type: "imagen", src:"img/publicidad/Publicista_MockUp.png"}
+                ,
                 
             ]
         }//12
@@ -201,7 +201,7 @@ $(document).ready(function(){
             hero: "Irismedia",
             descripcion: "texto intenso",
             imgs: [
-                "img/publicidad/Publicista_MockUp.png",
+                {type: "imagen", src:"img/publicidad/Publicista_MockUp.png"}
                 
             ]
         }//14
@@ -210,7 +210,8 @@ $(document).ready(function(){
             hero: "Irismedia",
             descripcion: "texto intenso",
             imgs: [
-                "img/publicidad/Publicista_MockUp.png",
+                {type: "imagen", src:"img/publicidad/Publicista_MockUp.png"}
+                ,
                 
             ]
         }//15
@@ -219,7 +220,8 @@ $(document).ready(function(){
             hero: "Thinkink",
             descripcion: "texto intenso",
             imgs: [
-                "img/thinkink/tarjeta_MU.jpg",
+                {type: "imagen", src:"img/thinkink/tarjeta_MU.jpg"}
+                ,
                 
             ]
         }//16
@@ -295,7 +297,32 @@ $(document).ready(function(){
             
 
         });
-    })
+    });
     
-    
+
+
+    //formulario
+
+    var carga = 0;
+
+    $(".info").focusout(function(){
+        var input = $(this).val() 
+            console.log($(this).val())
+        //
+        if (input.length >= 3 && !$(this).hasClass("validado")){
+            console.log("input bien");
+            carga = carga + 20;
+            $(".barra_carga").css({"width": carga+"%"});
+            $(this).addClass("validado");
+        }
+        else if (input.length >= 3 && $(this).hasClass("validado")) {
+
+        }
+        else {
+            carga = carga -20;
+            $(".barra_carga").css({"width": carga+"%"});
+            $(this).removeClass("validado");
+        }
+
+    });
 });

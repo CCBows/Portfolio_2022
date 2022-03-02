@@ -32,21 +32,6 @@ body {
      display: flex;
      flex-direction: column;
 }
-#menu #secciones .seccion .desplegable {
-    position: absolute;
-    top: 20px;
-    background-color: rgb(23, 23, 23);
-    color: var(--main-color);
-    display: none;
-    /*flex-direction: column;*/
-    padding: 16px;
-}
-#menu #secciones .seccion .desplegable a{
-    white-space: nowrap;
-    text-decoration: none;
-    color: white;
-    padding: 4px;
-}
 #menu #burger-menu{
     display:none;
 }
@@ -57,8 +42,69 @@ header.hero {
      background-color: aquamarine;
      width: 100vw;
      height: 700px;
-     display: flex;
 }
+/*-----------------------------FORM----------------------------------------*/
+header.hero#contact {
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header.hero#contact .form_box{
+    width: 40%;
+    background-color: var(--main-gray);
+    padding: 10px;
+}
+header.hero#contact .form_box .barra_carga{
+    height: 2px;
+    width: 0%;
+    background-color: var(--main-color);
+    margin: 40px 0px;
+    transition: 0.5s;
+}
+header.hero#contact .form_box form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+header.hero#contact .form_box .campo-50{
+    width: 30%;
+    border-left: solid 1px var(--main-color);
+    padding: 10px;
+    margin: 10px;
+}
+header.hero#contact .form_box .campo-100{
+    width: 64%;
+    border-left: solid 1px var(--main-color);
+    padding: 10px;
+    margin: 10px;
+}
+header.hero#contact .form_box .boton_form{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+header.hero#contact .form_box .boton_form input{
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--main-gray);
+}
+header.hero#contact .form_box form p{
+    color: var(--main-color);
+}
+header.hero#contact .form_box form input{
+    color: var(--main-gray);
+    width: 80%;
+    height: 34px;
+    border: none;
+    outline: none;
+}
+/*-----------------------------FIN DE FORM----------------------------------------*/
 header.hero .imagen img {
      width: 100%;
 }
@@ -180,29 +226,15 @@ footer {
     justify-content: space-around;
     align-items: center;
     height: 400px;
-
+    background-color: var(--main-gray);
 }
 footer .social{
     text-align: center;
     font-size: 24px;
-    color: black;
+    color: var(--light-gray);
 }
 footer .social i{
     padding: 10px 10px;
-}
-footer .links {
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-footer .links a{
-    text-decoration: none;
-    padding: 4px 10px;
-    color: lightslategray;
-    border-right: solid black 1px;
 }
 /*------------lightbox----------------*/
 .contenedor_lightbox {
@@ -235,7 +267,7 @@ footer .links a{
     z-index:2;
 }
 .contenedor_lightbox .lightbox .titulo_lightbox h1{
-    
+    width: 75%;
     color: var(--main-color);
 } 
 .contenedor_lightbox .lightbox .descripcion_lightbox{
@@ -261,22 +293,11 @@ footer .links a{
     padding: 10px 0px
 }
 /*---------------------- ANIMACIONES --------------------------*/
-footer .social:hover{
-    color: lightslategray;
-}
 footer .social i:hover{
-    color: black;
-}
-footer .links a:hover{
-    text-decoration: none;
-    color: rgb(169, 180, 191);
+    color: var(--main-color);
 }
 #menu #secciones .seccion:hover {
-    color: rgb(169, 180, 191);
-}
-#menu #secciones .seccion:hover .desplegable {
-    display: flex;
-    flex-direction: column;
+    color: var(--light-gray);
 }
 div.content .caja:hover .imagen {
     transform: scale(1.5);
@@ -288,7 +309,7 @@ div.content .caja:hover .pantalla{
     opacity: 0.8;
 }
 /*-------------MEDIA QUERYS---------------------*/
-@media (min-width: 768px) and (max-width: 1000px) {
+@media (min-width: 768px) and (max-width: 1200px) {
 
     #menu #secciones {
         display:none;
@@ -370,6 +391,33 @@ div.content .caja:hover .pantalla{
         right: 23px;
         display: block;
     }
+    /*-------form----------*/
+    header.hero#contact .form_box{
+        width: 90%;
+        background-color: var(--main-gray);
+        padding: 10px;
+    }
+    header.hero#contact .form_box .campo-50{
+        width: 30%;
+        padding: 10px;
+        margin: 10px;
+    }
+    header.hero#contact .form_box .campo-100{
+        width: 100%;
+    }
+    header.hero#contact .form_box .boton_form{
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+    header.hero#contact .form_box .boton_form input{
+        width: 75%;
+    }
+    header.hero#contact .form_box form input{
+        width: 100%;
+
+    }
 
 }
 @media screen and (max-width: 767px) {
@@ -435,7 +483,7 @@ div.content .caja:hover .pantalla{
     }
     .lightbox {
         width:100%;
-        max-height: 98vh;
+        max-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -454,7 +502,7 @@ div.content .caja:hover .pantalla{
         height: 90vh;
         overflow-y: scroll;
     }   
-    .contenedor_lightbox .lightbox img{
+    .contenedor_lightbox .lightbox .imgs_lightbox img{
         width: 100%;
         height: auto;
         padding: 8px 0px;
@@ -464,6 +512,33 @@ div.content .caja:hover .pantalla{
         top: 44px;
         right: 23px;
         display: block;
+    }
+    /*-------form----------*/
+    header.hero#contact .form_box{
+        width: 90%;
+        background-color: var(--main-gray);
+        padding: 10px;
+    }
+    header.hero#contact .form_box .campo-50{
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+    }
+    header.hero#contact .form_box .campo-100{
+        width: 100%;
+    }
+    header.hero#contact .form_box .boton_form{
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+    header.hero#contact .form_box .boton_form input{
+        width: 75%;
+    }
+    header.hero#contact .form_box form input{
+        width: 100%;
+
     }
 }
 /*-------------------CLASES JQUERYS----------------------*/
