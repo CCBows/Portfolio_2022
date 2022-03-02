@@ -79,7 +79,7 @@ $(document).ready(function(){
             hero: "Stupid climate change",
             descripcion: "ese texto bueno ahí",
             imgs: [
-                {type: "imagen", src:"img/ilustracion/mariposa_baja.png"}
+                {type: "imagen", src:"img/ilustracion/BlackLagoon_Monster_climate_BAJA"}
                 ,
             ]
         }//1
@@ -117,7 +117,7 @@ $(document).ready(function(){
             hero: "Kinda confused",
             descripcion: "texto intenso",
             imgs: [
-                {type: "imagen", src:"img/ilustracion/fightforyourhive_texture-01.png"}
+                {type: "imagen", src:"img/ilustracion/kinda-confused_BAJA.png"}
             ]
         }//5
         ,
@@ -298,23 +298,22 @@ $(document).ready(function(){
 
         });
     });
-    
 
-
-    //formulario
+    //formulario--------------------------------------
 
     var carga = 0;
 
     $(".info").focusout(function(){
         var input = $(this).val() 
             console.log($(this).val())
-        //
+        //condicion de que los input tengan mas de 3 caracteres y no tengan la clase validado
         if (input.length >= 3 && !$(this).hasClass("validado")){
             console.log("input bien");
             carga = carga + 20;
             $(".barra_carga").css({"width": carga+"%"});
             $(this).addClass("validado");
         }
+        //condicion de que tengan mas de tres caracteres  
         else if (input.length >= 3 && $(this).hasClass("validado")) {
 
         }
