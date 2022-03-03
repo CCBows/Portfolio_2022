@@ -35,34 +35,35 @@
     </nav>
     <header class="hero" id="contact">
         <div class="form_box">
+            <h2>Escríbeme</h2>
             <div class="barra_carga"></div>
-                <form action="">
+            <form action="sendEmail.php" method="POST">
                     <div class="campo-50">
                         <p>Nombre</p>
-                        <input class="info" type="text" placeholder="nombre">
+                        <input class="info" type="text" placeholder="nombre" name="nombre">
                     </div>
                     <div class="campo-50">
                         <p>Email</p>
-                        <input class="info" type="text" placeholder="email">
+                        <input class="info" type="text" placeholder="email"  name="email">
                     </div>
                     <div class="campo-50">
                         <p>Teléfono</p>
-                        <input class="info" type="text" placeholder="teléfono">
+                        <input class="info" type="text" placeholder="teléfono" name="telefono">
                     </div>
                     <div class="campo-50">
                         <p>Asunto</p>
                         <input type="text"  class="info"
-                        placeholder="asunto">
+                        placeholder="asunto" name="asunto">
                     </div>
                     <div class="campo-100">
                         <p>Mensaje</p>
                         <!--poner elemento textarea en lugar de input-->
-                        <input class="info" type="text" placeholder="escribe tu mensaje">
+                        <textarea class="info" type="text" placeholder="escribe tu mensaje" name="mensaje"></textarea>
                     </div>
                     <div class="boton_form">
                         <input type="submit">
                     </div>
-                </form>
+            </form>
         </div>
     </header>
     <!--MENU DESPLEGABLE-->

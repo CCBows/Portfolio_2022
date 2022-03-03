@@ -8,6 +8,8 @@
 }
 a {
     text-decoration: none;
+    color: var(--main-gray);
+    font-weight: bold;
 }
 body {
     margin:0;
@@ -59,6 +61,9 @@ header.hero#contact .form_box{
     background-color: var(--main-gray);
     padding: 10px;
 }
+header.hero#contact .form_box h2{
+    color: var(--main-color);
+}
 header.hero#contact .form_box .barra_carga{
     height: 2px;
     width: 0%;
@@ -107,7 +112,15 @@ header.hero#contact .form_box form input{
     border: none;
     outline: none;
 }
+header.hero#contact .form_box form textarea{
+    color: var(--main-gray);
+    width: 80%;
+    height: 34px;
+    border: none;
+    outline: none;
+}
 /*-----------------------------FIN DE FORM----------------------------------------*/
+/*------------GALERIA------------*/
 header.hero .imagen img {
      width: 100%;
 }
@@ -198,6 +211,45 @@ div.content .caja .pantalla{
     top: 44px;
     right: 23px;
     display: none;
+}
+/*-----------------INFORMACION---------------------*/
+header.hero#info {
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+header.hero#info .info_box{
+    width: 40%;
+    background-color: var(--main-gray);
+    padding: 10px;
+}
+header.hero#info .info_box h2{
+    color: var(--main-color);
+}
+header.hero#info .info_box .info_content {
+    display: flex;
+    justify-content: flex-start;
+}
+header.hero#info .info_box .info_content .avatar {
+    width: 25%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: var(--main-color) solid 2px;
+    overflow: hidden;
+    animation-name: avatar_animation;
+    animation-duration: 1s;
+}
+header.hero#info .info_box .info_content .avatar img{
+    width: 100%;
+}
+header.hero#info .info_box .info_content .text_info {
+    width: 75%;
+    color: var(--main-color);
+    border-left: var(--main-color) solid 2px;
+    margin: 0px 4%;
+    padding: 0px 4%;
 }
 /*----------MENU DESPLEGABLE------------*/
 #desplegable {
@@ -310,6 +362,22 @@ div.content .caja:hover .texto{
 }
 div.content .caja:hover .pantalla{
     opacity: 0.8;
+}
+
+@keyframes avatar_animation{
+    0% {
+        transform: scale(0);
+        
+    }
+    75%{
+        transform: scale(110%);
+        filter: blur(2px);
+    }
+    100%{
+        transform: scale(100%);
+        filter: blur(0px);
+    }
+
 }
 /*-------------MEDIA QUERYS---------------------*/
 @media (min-width: 768px) and (max-width: 1200px) {
