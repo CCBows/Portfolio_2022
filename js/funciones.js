@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     console.log("ready");
-
+    //menu desplegable----------------------------------------
     $("nav#menu #burger-menu").click (function(){
         $("#desplegable").addClass("show");
         $("#close").addClass("show-close");
@@ -12,6 +12,78 @@ $(document).ready(function(){
         $("#close").removeClass("show-close");
         $("nav#menu #burger-menu").css("display","flex");
     });
+    //headermousemove-----------------------------
+
+    $(".mouse_animate").mousemove(function(event){
+        //determino la altura que restarle al hero (la del nav) y el punto medio del width del hero con estas variables
+        var altura_nav = $("#menu").height();
+        var ancho_hero = $(".hero").width()/2;
+
+        console.log(altura_nav);
+
+        var altura_real = event.pageY - altura_nav;
+        var ancho_real = event.pageX - ancho_hero;
+        //mover capas en funcion de los valores de position del mouse
+        if ($(window).width() > 1200) {
+            $("#capa_1").css({
+                "top":-altura_real/80 +"%",
+                "left":-ancho_real/80 +"%",
+            })
+            $("#capa_2").css({
+                "top":-altura_real/100 +"%",
+                "left":-ancho_real/100 +"%",
+            })
+            $("#capa_3").css({
+                "top":-altura_real/100 +"%",
+                "left":-ancho_real/100 +"%",
+            })
+        }
+        
+    });
+    $( ".mouse_animate" ).mouseenter(function(event) {
+        var altura_nav = $("#menu").height();
+        var ancho_hero = $(".hero").width()/2;
+
+        var altura_real = event.pageY - altura_nav;
+        var ancho_real = event.pageX - ancho_hero;
+
+        console.log("dentro");
+        // $(".capa").animate({}, 1000, function() {});
+        if ($(window).width() > 1200) {
+            $("#capa_1").animate({
+                "top":0,
+                "left":-ancho_real/80 +"%",  
+            }, 100, function() {
+                // Animation complete.
+            });
+            $("#capa_2").animate({
+                "top":0,
+                "left":-ancho_real/100 +"%",  
+            }, 100, function() {
+                // Animation complete.
+            });
+
+            $("#capa_3").animate({
+                "top":0,
+                "left":-ancho_real/100 +"%",  
+                }, 100, function() {
+                // Animation complete.
+            });
+        }
+    });
+    $( ".mouse_animate" ).mouseleave(function() {
+        if ($(window).width() > 1200) {
+            $(".capa").animate({
+            top: 0,
+            left: 0,
+            }, 500, function() {
+            // Animation complete.
+            });
+        }
+     });
+
+    //tira----------------------------------------
+    
     $(".item-1").click(function(){
         $(".super-container").addClass("go-item-1").removeClass("go-item-2").removeClass("go-item-3").removeClass("go-item-4").removeClass("go-item-5");
         $(".item-1").addClass("selected-item");
@@ -55,13 +127,17 @@ $(document).ready(function(){
     $(".caja").click(function(){
         $(".contenedor_lightbox").toggleClass("display-none");
     });
+    
+    //lightbox-------------------------------------
+    
     $(".fondo_lightbox").click(function(){
         $(".contenedor_lightbox").addClass("display-none");
     });
     $(".contenedor_lightbox .cierre").click(function(){
         $(".contenedor_lightbox").addClass("display-none");
     });
-    
+
+    //coleccion-------------------------------------
     var coleccion = [
         //JSON
         {
