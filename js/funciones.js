@@ -130,7 +130,21 @@ $(document).ready(function(){
     $(".caja").click(function(){
         $(".contenedor_lightbox").toggleClass("display-none");
     });
-    
+    //tira tactil----------------------------------------
+    //detectar el click con mouse enter.
+    $(".ventana").mouseenter(function(event){
+        //detectar el levantar el dedo con mouse leave.
+        var posicion_inicio = event.pageX
+        $(".ventana").mouseleave(function(event) {
+            var posicion_fin = event.pageX
+        }
+        //calcular la diferencia en x entre ambos
+        
+        //determinar la accion en base a la diferencia de distancia en X
+        if () {
+            
+        }
+    })
     //lightbox-------------------------------------
     
     $(".fondo_lightbox").click(function(){
