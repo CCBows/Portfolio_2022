@@ -65,7 +65,22 @@ header.hero #capa_2 {
 header.hero #capa_3 {
     z-index: 20;
 }
-/*-----------------------------FORM----------------------------------------*/
+.caja .elemento_carga {
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-gray);
+    position: absolute;
+    z-index: 2;
+}
+.caja .elemento_carga #circulo_carga{
+    stroke: var(--main-color);
+    fill: transparent;
+    animation-name: circulo_carga;
+    animation-duration: 4s;
+    stroke-dasharray: 200%;
+    animation-iteration-count: infinite;
+}
+/*-----------------------FORM--------------------------*/
 header.hero#contact {
     height: 75vh;
     display: flex;
@@ -278,7 +293,7 @@ header.hero#info .info_box .info_content .text_info {
     top: 0px;
     left: -80%;
     padding: 12px;
-    z-index: 2;
+    z-index: 50;
     transition: 1s;
 } 
 #close {
@@ -317,7 +332,7 @@ footer .social i{
     align-items: center;
     position: fixed;
     top:0;
-    z-index:3;
+    z-index:50;
 }
 .fondo_lightbox {    
     position: absolute;
@@ -380,7 +395,6 @@ div.content .caja:hover .texto{
 div.content .caja:hover .pantalla{
     opacity: 0.8;
 }
-
 @keyframes avatar_animation{
     0% {
         transform: scale(0);
@@ -395,6 +409,18 @@ div.content .caja:hover .pantalla{
         filter: blur(0px);
     }
 
+}
+@keyframes  circulo_carga {
+    0%{
+        stroke-dasharray: 0% 200%;
+    }
+    50%{
+        stroke-dasharray: 200% 200%;
+        stroke-dashoffset: 0%;
+    }
+    100%{
+        stroke-dashoffset: 200%;
+    }
 }
 /*-------------MEDIA QUERYS---------------------*/
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -514,6 +540,26 @@ div.content .caja:hover .pantalla{
 
     }
 
+    /*----------informacion-----------*/
+    header.hero#info .info_box{
+        width: 70%;
+        padding: 10px;
+    }
+    header.hero#info .info_box .info_content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header.hero#info .info_box .info_content .avatar {
+        width: 30%;
+        margin: 20px 0px;
+    }
+    header.hero#info .info_box .info_content .avatar img{
+        width: 100%;
+    }
+    header.hero#info .info_box .info_content .text_info {
+        width: 100%;
+        padding: 10px 4%;
+    }
 }
 @media screen and (max-width: 767px) {
 
@@ -641,6 +687,26 @@ div.content .caja:hover .pantalla{
     header.hero#contact .form_box form input{
         width: 100%;
 
+    }
+    /*----------informacion-----------*/
+    header.hero#info .info_box{
+        width: 90%;
+        padding: 10px;
+    }
+    header.hero#info .info_box .info_content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header.hero#info .info_box .info_content .avatar {
+        width: 70%;
+        margin: 20px 0px;
+    }
+    header.hero#info .info_box .info_content .avatar img{
+        width: 100%;
+    }
+    header.hero#info .info_box .info_content .text_info {
+        width: 100%;
+        padding: 10px 4%;
     }
 }
 /*-------------------CLASES JQUERYS----------------------*/

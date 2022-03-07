@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    
+
     console.log("ready");
     //menu desplegable----------------------------------------
     $("nav#menu #burger-menu").click (function(){
@@ -12,6 +14,7 @@ $(document).ready(function(){
         $("#close").removeClass("show-close");
         $("nav#menu #burger-menu").css("display","flex");
     });
+
     //headermousemove-----------------------------
 
     $(".mouse_animate").mousemove(function(event){
@@ -155,7 +158,7 @@ $(document).ready(function(){
             hero: "Stupid climate change",
             descripcion: "ese texto bueno ahí",
             imgs: [
-                {type: "imagen", src:"img/ilustracion/BlackLagoon_Monster_climate_BAJA"}
+                {type: "imagen", src:"img/ilustracion/BlackLagoon_Monster_climate_BAJA.png"}
                 ,
             ]
         }//1
@@ -400,4 +403,9 @@ $(document).ready(function(){
         }
 
     });
+});
+
+$(window).on("load",function(){
+    console.log("cargado");
+    $(".elemento_carga").fadeOut(500);
 });
