@@ -354,7 +354,7 @@ footer .social i{
     z-index:2;
 }
 .contenedor_lightbox .lightbox .titulo_lightbox h1{
-    width: 75%;
+    width: 100%;
     color: var(--main-color);
 } 
 .contenedor_lightbox .lightbox .descripcion_lightbox{
@@ -479,7 +479,7 @@ div.content .caja:hover .pantalla{
         align-items: center;
         position: fixed;
         top: 0;
-        z-index: 10;
+        z-index: 50;
     }
     .lightbox {
         width:80%;
@@ -608,8 +608,8 @@ div.content .caja:hover .pantalla{
         transform: translateX(-210px);
     }
     div.row #trabajos div{
-        padding: 10px 10px;
-        font-size: 12px;
+        padding: 10px 6px;
+        font-size: 10px;
     }
     div.row{
         display: flex;
@@ -627,7 +627,7 @@ div.content .caja:hover .pantalla{
         align-items: center;
         position: fixed;
         top: 0;
-        z-index: 10;
+        z-index: 50;
     }
     .lightbox {
         width:100%;

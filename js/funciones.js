@@ -85,7 +85,7 @@ $(document).ready(function(){
         }
      });
 
-    //tira----------------------------------------
+    //tira menu ----------------------------------------
     
     $(".item-1").click(function(){
         $(".super-container").addClass("go-item-1").removeClass("go-item-2").removeClass("go-item-3").removeClass("go-item-4").removeClass("go-item-5");
@@ -130,21 +130,57 @@ $(document).ready(function(){
     $(".caja").click(function(){
         $(".contenedor_lightbox").toggleClass("display-none");
     });
-    //tira tactil----------------------------------------
-    //detectar el click con mouse enter.
-    $(".ventana").mouseenter(function(event){
-        //detectar el levantar el dedo con mouse leave.
-        var posicion_inicio = event.pageX
-        $(".ventana").mouseleave(function(event) {
-            var posicion_fin = event.pageX
-        }
-        //calcular la diferencia en x entre ambos
+
+
+    //tira tactil V2---------------------------
+
+
+    var click_ini;
+    var current_item = 1;
+    var cerrojo = false;
+
+
+    //MOUSE DOWN
+    $(document).on('touchstart', '.ventana', function(e){
+        var xPos = e.originalEvent.touches[0].pageX;
+        click_ini = xPos;
+        cerrojo = true;
+    });
+    //MOUSEUP
+    $(document).on ('touchend', '.ventana', function(e){
+
+    });
+    //MOUSEMOVE
+    $(document).on ('touchmove', '.ventana', function(e){
+        var xPos = e.originalEvent.touches[0].pageX;
+        console.log("movimiento")
+        console.log(click_ini)
         
-        //determinar la accion en base a la diferencia de distancia en X
-        if () {
-            
+        var diferenciaX = click_ini - xPos;
+
+        if (diferenciaX > 200 && cerrojo && current_item <5 ) {
+            //console.log("derecha")
+            $(".super-container").removeClass("go-item-"+current_item);
+            $(".selected-item").removeClass("selected-item")
+            current_item = current_item + 1;
+            $(".super-container").addClass("go-item-"+current_item);
+            $(".item-"+current_item).addClass("selected-item")
+            cerrojo = false;
+
         }
-    })
+        else if (diferenciaX < -200 && cerrojo && current_item > 1){
+            //console.log("izquierda");
+            $(".super-container").removeClass("go-item-"+current_item);
+            $(".selected-item").removeClass("selected-item");
+            current_item = current_item - 1;
+            $(".super-container").addClass("go-item-"+current_item);
+            $(".item-"+current_item).addClass("selected-item")
+            cerrojo = false;
+        }
+    });
+
+    
+
     //lightbox-------------------------------------
     
     $(".fondo_lightbox").click(function(){
@@ -256,7 +292,14 @@ $(document).ready(function(){
             descripcion: "texto intenso",
             imgs: [
                 
-                "img/diseño editorial/Lovecraft.jpg",
+                {type: "imagen", src:"img/diseño editorial/"}
+                ,
+                {type: "imagen", src:"img/diseño editorial/"}
+                ,
+                {type: "imagen", src:"img/diseño editorial/"}
+                ,
+                {type: "imagen", src:"img/diseño editorial/"}
+                ,
                 
             ]
         }//10
@@ -291,16 +334,16 @@ $(document).ready(function(){
         }//13
         ,
         {
-            hero: "Irismedia",
+            hero: "Feelin' fine",
             descripcion: "texto intenso",
             imgs: [
-                {type: "imagen", src:"img/publicidad/Publicista_MockUp.png"}
+                {type: "video", src:"img/animacion/feelinfine.mp4"}
                 
             ]
         }//14
         ,
         {
-            hero: "Irismedia",
+            hero: "Rockin' Island",
             descripcion: "texto intenso",
             imgs: [
                 {type: "imagen", src:"img/publicidad/Publicista_MockUp.png"}
@@ -322,8 +365,6 @@ $(document).ready(function(){
     ]
 
     console.log(coleccion[0]);
-
-    //ARRAY
 
     $(".caja").click(function(){
         //asigna valor i basado en el data-number de .caja
@@ -419,7 +460,9 @@ $(document).ready(function(){
     });
 });
 
-$(window).on("load",function(){
+    //elemento de carga------------------------
+
+    $(window).on("load",function(){
     console.log("cargado");
     $(".elemento_carga").fadeOut(500);
 });
