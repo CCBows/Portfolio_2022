@@ -198,7 +198,7 @@ $(document).ready(function(){
             descripcion: "texto intenso",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/fightforyourhive_texture-01.png"},
-                {type: "imagen", src:"img/ilustracion/bees.jpg"},
+                {type: "imagen", src:"img/ilustracion/bees.png"},
                 {type: "imagen", src:"img/ilustracion/mariposa_baja.png"},
                 {type: "imagen", src:"img/ilustracion/escarabajo.png"},
             ]
@@ -218,10 +218,10 @@ $(document).ready(function(){
             descripcion: "texto intenso",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/Boxeo Final_BAJA.jpg"},
-                {type: "imagen", src:"img/ilustracion/RugbyFinal_BAJA.jpg"},
-                {type: "imagen", src:"img/ilustracion/TaekwondoFinal_BAJA.jpg"},
-                {type: "imagen", src:"img/ilustracion/TigreHockey_BAJA.jpg"},
-                {type: "imagen", src:"img/ilustracion/Surf_Final-BAJA.jpg"},
+                {type: "imagen", src:"img/ilustracion/RugbyFinal_BAJA.png"},
+                {type: "imagen", src:"img/ilustracion/TaekwondoFinal_BAJA.png"},
+                {type: "imagen", src:"img/ilustracion/TigreHockey_BAJA.png"},
+                {type: "imagen", src:"img/ilustracion/Surf_Final-BAJA.png"},
             ]
         }//2
         ,
