@@ -288,7 +288,7 @@ $(document).ready(function(){
         }//9
         ,
         {
-            hero: "Lo que acecha en el umbral",
+            hero: "Rackham",
             descripcion: "texto intenso",
             imgs: [
                 
@@ -346,7 +346,7 @@ $(document).ready(function(){
             hero: "Rockin' Island",
             descripcion: "texto intenso",
             imgs: [
-                {type: "imagen", src:"img/publicidad/Publicista_MockUp.png"}
+                {type: "video", src:"img/animacion/RockinIsland.mp4"}
                 ,
                 
             ]
