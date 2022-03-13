@@ -292,13 +292,13 @@ $(document).ready(function(){
             descripcion: "texto intenso",
             imgs: [
                 
-                {type: "imagen", src:"img/diseño editorial/"}
+                {type: "imagen", src:"img/diseño editorial/rackham/revista_2.png"}
                 ,
-                {type: "imagen", src:"img/diseño editorial/"}
+                {type: "imagen", src:"img/diseño editorial/rackham/memoria_y_revista.png"}
                 ,
-                {type: "imagen", src:"img/diseño editorial/"}
+                {type: "imagen", src:"img/diseño editorial/rackham/manual_2.png"}
                 ,
-                {type: "imagen", src:"img/diseño editorial/"}
+                {type: "imagen", src:"img/diseño editorial/rackham/manual_1.png"}
                 ,
                 
             ]
