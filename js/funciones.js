@@ -195,7 +195,7 @@ $(document).ready(function(){
         //JSON
         {
             hero: "Fight for your hive",
-            descripcion: "texto intenso",
+            descripcion: "Inspirada en la cartelería porpagandística de tiempos de guerra la colección FIght for your hive (lucha por tu colmena) representan la unidad ante el conflicto mediante insectos humanoides",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/fightforyourhive_texture-01.png"},
                 {type: "imagen", src:"img/ilustracion/bees.png"},
@@ -215,7 +215,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Game night gone wild",
-            descripcion: "texto intenso",
+            descripcion: "Esta colección se compone de cinco pósters de carácter deportivo en los que se representa a sus protagonistas como animales antropomórficos.\n\nAdemás de una fuerte influencia por el cómic, la ilustración de trazos en tinta negra con colores planos recuerda a las revistas de ciencia ficción y fantasía populares en los años 60.\n\n Esta colección no tiene más propósito que el de ser un conjunto de ilustraciones divertidas que unen lo fantástico y decorativo a la cartelería deportiva común en nuestro imaginario colectivo.",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/Boxeo Final_BAJA.jpg"},
                 {type: "imagen", src:"img/ilustracion/RugbyFinal_BAJA.png"},
@@ -227,7 +227,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Anax Imperator",
-            descripcion: "texto intenso",
+            descripcion: "La ilustración científica es una de las ramas más complejas de la ilustración ya que exige un realismo certero a la vez que una función didáctica, todo esto se resume en una ilustración muy cercana a la realidad y que permita la comprensión de lo más mínimos detalles de las especies representadas.\n\nEn este caso se trata de una Anax Imperator o libélula emperador. Esta se representa con una vista cenital que nos ayuda a identificar todas sus partes, proporciones y colores a la perfección. Además muestra su estado como larva y sus huevos, información de gran interés para los estudiantes de ciencias naturales.",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/AnaxImperator.jpg"}
             ]
@@ -235,7 +235,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Searching signal",
-            descripcion: "texto intenso",
+            descripcion: "",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/Moai.jpg"}
                 
@@ -244,7 +244,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Kinda confused",
-            descripcion: "texto intenso",
+            descripcion: "",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/kinda-confused_BAJA.png"}
             ]
@@ -252,7 +252,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Ready to rumble",
-            descripcion: "texto intenso",
+            descripcion: "",
             imgs: [
                 
                 {type: "imagen", src:"img/ilustracion/ReadyToRumble_IG.jpg"}
@@ -261,7 +261,7 @@ $(document).ready(function(){
         ,
         {
             hero: "It came from outer space",
-            descripcion: "texto intenso",
+            descripcion: "Ilustración de ciencia ficción clásica inspirada en las portadas pulp de las resvistas de la década de los 60.\n\nCreada con cinema 4D no busca el realismo si no la estética low-poly en forma de decorado teatral.",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/RenderGRanero.jpg"}
                 
@@ -270,7 +270,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Sand dunes and send nudes",
-            descripcion: "texto intenso",
+            descripcion: "",
             imgs: [
                 {type: "imagen", src:"img/ilustracion/SanDunes_CUADRADO-02.png"}
                 ,
@@ -279,7 +279,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Lo que acecha en el umbral",
-            descripcion: "texto intenso",
+            descripcion: "En este trabajo se diseña la portada del libro “Lo que acecha en el umbral” de H.P. Lovecraft.\n\nLa temática de horror cósmico se transmite perfectamente mediante las figuras desconcertantes, pinceladas poco  definidas y juego de luces y composición. De esta forma conseguimos transmitir el contenido de la obra no a través de lo que muestra si no a través del sentimiento que genera.\n\nEsto es especialmente complejo con esta temática tan difícil de mostrar en imágenes, ya que es un miedo primario no solo a lo desconocido si no también a lo incomprensible.\n\nLa combinación de los elementos anteriormente mencionados consiguen este efecto además de captar la atención del lector con la mirada de la rana.",
             imgs: [
                 {type: "imagen", src:"img/diseño editorial/Lovecraft.jpg"}
                 ,
@@ -289,7 +289,8 @@ $(document).ready(function(){
         ,
         {
             hero: "Rackham",
-            descripcion: "texto intenso",
+            descripcion: "Rackham es un proyecto editorial que creaba una revista de cómics a partir de creaciones de usuarios que generaban dichas obras de ficción a partir de una frase iniciadora o trigger.\n \nEs un proyecto completamente desarrollado que engloba la investigación previa desde el punto de vista histórico y comercial, el desarrollo de la marca a través del manual de identidad corporativa, piezas gráficas, publicitarias, editoriales y web.\n \n Respecto al desarrollo de la identidad de marca el naming está escogido para que sea rapidamente identificado por los aficionados del cómic, ya que Rackham es un popular personaje de Tintín. Además esta rápida identificación es más evidente ya que el logotipo tipográfico usa la misma fuente que la portada española original de Tintín donde se menciona el nombre Rackham.\n \n Gráficamente el logotipo funciona muy bien como cabecera y es versátil a la hora de combinarlo con otras ilustraciones, lo cual es especialmente importante ya que al ser una revista de cómic participativa las ilustraciones que se usan no están hechas con el propósito de acompañar al logo.\n \nEn cuanto al resto de características gráficas, siempre se usarían ilustraciones que se identificasen rápidamente con el mundo del cómic, ya sea por la forma (estilos de ilustración) o por el contenido temático de dichas ilustraciones."
+                ,
             imgs: [
                 
                 {type: "imagen", src:"img/diseño editorial/rackham/revista_2.png"}
@@ -306,7 +307,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Mini",
-            descripcion: "texto intenso",
+            descripcion: "En este caso nos enconramos ante una pieza de publicidad exterior para la marca de automóviles Mini. Para ello se realizó la pieza a partir de la marca y un claim (“Un mini siempre está lleno de vida”), la gráfica tiene una composición diagonal que junto a la sensación de movimiento la dota de dinamismo y vida.\n \nA nivel creativo el uso del humor es evidente, lo cual genera una sentimiento de simpatía en el observador y refuerza el impacto, facilitando el recuerdo de la gráfica.",
             imgs: [
                 {type: "imagen", src:"img/publicidad/mini_MU.jpg"}
                 ,
@@ -316,7 +317,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Irismedia",
-            descripcion: "texto intenso",
+            descripcion: "Página publicitaria de la agencia de medios Irismedia expresando la transparencia en procesos y servicio y la eficiencia resultante del amplio conocimiento del equipo.",
             imgs: [
                 {type: "imagen", src:"img/publicidad/Publicista_MockUp.png"}
                 ,
@@ -354,7 +355,7 @@ $(document).ready(function(){
         ,
         {
             hero: "Thinkink",
-            descripcion: "texto intenso",
+            descripcion: "Esta gráfica fue un proyecto personal en el que se creó una marca para un estudio de diseño desde cero.\n \nEl logotipo esta formado por dos palabras, “think” e “ink”, debido a que el proceso creativo consiste tanto en crear como en plasmar la idea, pero suenan similar a “thinking”, lo cual dota a la marca de una imagen constante y trabajadora, que no para de crear. Así, ambas palabras se distinguen por sus distintos pesos tipográficos y por los colores corporativos.\n \nSe introdujo el icono de la gota de tinta ya que podía tener usos futuros y convertirse en un elemento constante en posteriores campañas propias de la empresa. El color coincide con el de la palabra “think” para dar más cohesión al logotipo y equilibrarlo.",
             imgs: [
                 {type: "imagen", src:"img/thinkink/tarjeta_MU.jpg"}
                 ,

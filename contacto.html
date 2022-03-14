@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <!--Fontawesome-->
     <script src="https://kit.fontawesome.com/2d60c846f7.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Librería de emailjs -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Conexión a archivo local de configuración de envío -->
+    <script src="js/sendemailjs.js"></script>
+
 </head>
 <body>
 <main>
@@ -20,7 +29,7 @@
                 <a href="index.html">TRABAJOS</a>
             </div>
             <div class="seccion">
-                <a href="ccbows.github.io/webfolio_2022">WEBFOLIO</a>
+                <a href="https://ccbows.github.io/webfolio_2022/">WEBFOLIO</a>
             </div>
             <div class="seccion">
                 <a href="informacion.html">INFORMACIÓN</a>
@@ -40,7 +49,7 @@
         <div class="form_box">
             <h2>Escríbeme</h2>
             <div class="barra_carga"></div>
-            <form action="sendEmail.php" method="POST">
+            <form id="contact-form">
                     <div class="campo-50">
                         <p>Nombre</p>
                         <input class="info" type="text" placeholder="nombre" name="nombre">
@@ -64,9 +73,13 @@
                         <textarea class="info" type="text" placeholder="escribe tu mensaje" name="mensaje"></textarea>
                     </div>
                     <div class="boton_form">
-                        <input type="submit">
+                        <input type="submit" id="boton_form">
                     </div>
             </form>
+            <div class="exito">
+                <h3>¡Gracias por contactar!</h3>
+                <span>Te responderemos lo antes posible</span>
+            </div>
         </div>
     </header>
     <!--MENU DESPLEGABLE-->
@@ -75,7 +88,7 @@
             <a href="index.html">TRABAJOS</a>
         </div>
         <div class="seccion">
-            <a href="ccbows.github.io/webfolio_2022">WEBFOLIO</a>
+            <a href="https://ccbows.github.io/webfolio_2022/">WEBFOLIO</a>
         </div>
         <div class="seccion">
             <a href="informacion.html">INFORMACIÓN</a>
